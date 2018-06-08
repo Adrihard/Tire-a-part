@@ -1,4 +1,12 @@
 [
+  {
+      "from": "corpus/:corpus",
+      "to": "_view/corpus",
+      "query": {
+        "startkey": [":corpus"],
+        "endkey": [":corpus", {}]
+      }
+  },
   { 
     "from": "included/*",
     "to": "*"
