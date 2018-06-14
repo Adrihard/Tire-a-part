@@ -17,7 +17,16 @@ function(o) {
     return false;
   }
 
-  if(o._attachments){
+  if (o.corpus_name) {
+  	emit ([o.corpus_name], {"name": o.corpus_name});
+  	
+  	if (o.users) {
+	  	for (var user in o.users)
+	  		emit([o.corpus_name], {"user": user});
+	}
+  }
+
+  else if(o._attachments){
     //item name, thumbnail and resource
     emit(["UTT", o._id], {
       name:o.item_name,
