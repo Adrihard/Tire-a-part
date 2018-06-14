@@ -8,6 +8,14 @@
       }
   },
   {
+    "from": "topic/:viewpoint/:topic",
+    "to": "_view/viewpoint",
+    "query": {
+       "startkey": [":viewpoint", ":topic"],
+       "endkey": [":viewpoint", ":topic", {}]
+    }
+  },
+  {
     "from": "user/:user",
     "to": "_view/user",
     "query": {
