@@ -6,7 +6,40 @@
         "startkey": [":corpus"],
         "endkey": [":corpus", {}]
       }
-  },{
+  },
+  {
+    "from": "item/:corpus/:item",
+    "to": "_view/item",
+    "query": {
+       "startkey": [":corpus", ":item"],
+       "endkey": [":corpus", ":item", {}]
+    }
+  },
+  {
+    "from": "item/:resource",
+    "to": "_view/resource",
+    "query": {
+       "startkey": [":resource"],
+       "endkey": [":resource", {}]
+    }
+  },
+  {
+    "from": "topic/:viewpoint/:topic",
+    "to": "_view/viewpoint",
+    "query": {
+       "startkey": [":viewpoint", ":topic"],
+       "endkey": [":viewpoint", ":topic", {}]
+    }
+  },
+  {
+    "from": "user/:user",
+    "to": "_view/user",
+    "query": {
+      "startkey": [":user"],
+      "endkey": [":user", {}]
+    }
+  },
+  {
     "from": "attribute/:corpus/",
     "to": "_view/attribute",
     "query": {
@@ -14,7 +47,8 @@
        "endkey": [":corpus", {}],
        "group_level": "2"
     }
-  }, {
+  },
+  {
     "from": "attribute/:corpus/:attribute/",
     "to": "_view/attribute",
     "query": {
@@ -22,7 +56,8 @@
        "endkey": [":corpus", ":attribute", {}],
        "group_level": "3"
     }
-  }, {
+  },
+  {
     "from": "attribute/:corpus/:attribute/:value",
     "to": "_view/attribute",
     "query": {
