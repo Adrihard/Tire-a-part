@@ -7,6 +7,14 @@
         "endkey": [":corpus", {}]
       }
   },
+  {
+    "from": "user/:user",
+    "to": "_view/user",
+    "query": {
+      "startkey": [":user"],
+      "endkey": [":user", {}]
+    }
+  },
   { 
     "from": "included/*",
     "to": "*"
