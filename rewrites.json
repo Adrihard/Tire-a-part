@@ -8,6 +8,22 @@
       }
   },
   {
+    "from": "item/:corpus/:item",
+    "to": "_view/item",
+    "query": {
+       "startkey": [":corpus", ":item"],
+       "endkey": [":corpus", ":item", {}]
+    }
+  },
+  {
+    "from": "item/:resource",
+    "to": "_view/resource",
+    "query": {
+       "startkey": [":resource"],
+       "endkey": [":resource", {}]
+    }
+  },
+  {
     "from": "topic/:viewpoint/:topic",
     "to": "_view/viewpoint",
     "query": {
@@ -23,7 +39,7 @@
       "endkey": [":user", {}]
     }
   },
-  { 
+  {
     "from": "included/*",
     "to": "*"
   }, {
