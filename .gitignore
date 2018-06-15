@@ -1,2 +1,6 @@
+#Couchapp files
 .couchappignore
 .couchapprc
+
+#NodeJS dependencies
+/node_modules

@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "frisby": "^2.0.16",
+    "jest": "^23.1.0"
+  }
+}
