@@ -16,7 +16,7 @@
     }
   },
   {
-    "from": "item/:resource",
+    "from": "item/",
     "to": "_view/resource",
     "query": {
        "startkey": [":resource"],
