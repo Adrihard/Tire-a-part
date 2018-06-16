@@ -9,6 +9,6 @@
   },
 
   "jest": {
-  	"testMatch" : [ "**/spec/api/**/*.js?(x)" ]
+  	"testMatch" : [ "**/spec/api/**/*_spec.js?(x)" ]
   }
 }
