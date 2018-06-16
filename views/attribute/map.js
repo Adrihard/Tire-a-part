@@ -21,7 +21,7 @@ function (o) {
     for (key in o) {
       if (!isReserved(key)) {
         value = o[key];
-        if (typeof value=="string") {
+        if (typeof value=="string" || typeof value=="number") {
           emit(
             ["UTT", key, value],
             {item:{id:o._id, name: o.item_name}}
