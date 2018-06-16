@@ -1,0 +1,1 @@
+exports.HOST = "http://oa.local:5984";
