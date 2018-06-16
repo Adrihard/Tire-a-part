@@ -6,6 +6,13 @@
         "startkey": [":corpus"],
         "endkey": [":corpus", {}]
       }
+  },{
+    "from": "viewpoint/:viewpoint",
+    "to": "_view/viewpoint",
+    "query": {
+       "startkey": [":viewpoint"],
+       "endkey": [":viewpoint", {}]
+    }
   },
   {
     "from": "item/:corpus/:item",
