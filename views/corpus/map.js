@@ -3,7 +3,7 @@ function(o) {
   function isReserved(key) {
     switch (key) {
       case "_id":
-      case "_rev": 
+      case "_rev":
       case "_attachments":
       case "_deleted_conflicts":
       case "_conflicts":
@@ -19,11 +19,11 @@ function(o) {
 
   if (o.corpus_name) {
   	emit ([o.corpus_name], {"name": o.corpus_name});
-  	
+
   	if (o.users) {
-	  	for (var user in o.users)
-	  		emit([o.corpus_name], {"user": user});
-	}
+	  	for (var i = 0; i < o.users.length; i++)
+	  		emit([o.corpus_name], {"user": o.users[i]});
+	  }
   }
 
   else if(o._attachments){
