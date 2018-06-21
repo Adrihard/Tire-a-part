@@ -39,12 +39,8 @@
     }
   },
   {
-    "from": "user/:user",
-    "to": "_view/user",
-    "query": {
-      "startkey": [":user"],
-      "endkey": [":user", {}]
-    }
+    "from": "user/open-access",
+    "to": "user.json"
   },
   {
     "from": "attribute/:corpus/",

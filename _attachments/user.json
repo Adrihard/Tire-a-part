@@ -1,0 +1,13 @@
+{
+"rows":[
+	{
+		"key":["open-access"],
+		"value": {"corpus":{"id":"UTT","name":"Publications de l'UTT"}}
+	},
+	
+	{
+		"key": ["open-access"], 
+		"value": {"viewpoint":{"id":"chercheur", "name":"Chercheurs"}}
+	}
+]
+}
